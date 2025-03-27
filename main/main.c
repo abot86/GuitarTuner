@@ -37,7 +37,7 @@
 #include "kiss_fft.h"
 #include "kiss_fftr.h"
 
-#define ADC_CHANNEL ADC1_CHANNEL_2  // For microphone
+#define ADC_CHANNEL ADC1_CHANNEL_6  // For microphone
 
 #define SDA_PIN GPIO_NUM_17
 #define SCL_PIN GPIO_NUM_18
@@ -93,11 +93,10 @@ lv_obj_t* note_label = NULL;
 char note_num[50];
 
 // Temp Display
-
-// HAS TO BE CHANGED FOR NEW DATA
 static void display() {
     lv_obj_t *scr = lv_disp_get_scr_act(disp_handle);
     if (lvgl_port_lock(0)) {
+        ESP_LOGI("DISPLAY", "Updating OLED display...");
         lv_obj_clean(scr);
 
         note_label = lv_label_create(scr);
@@ -105,6 +104,8 @@ static void display() {
         lv_obj_align(note_label, LV_ALIGN_TOP_MID, 0, 0);
         snprintf(note_num, sizeof(note_num), "Note: %s", detected_note);
         lv_label_set_text(note_label, note_num);
+
+        ESP_LOGI("DISPLAY", "Detected Note: %s", detected_note);
 
         lvgl_port_unlock();
     }
@@ -115,8 +116,13 @@ static void display() {
 static void read_analog() {
     for (int i = 0; i < SAMPLES; i++) {
         int raw_value = adc1_get_raw(ADC_CHANNEL);
-        samples[i] = (raw_value / 4096.0) * 2.0 - 1.0;  // Normalize between -1 and 1
-        vTaskDelay(pdMS_TO_TICKS(1000 / SAMPLING_FREQUENCY));   // Wait for next sample
+        samples[i] = raw_value;
+        ets_delay_us(1000000 / SAMPLING_FREQUENCY);
+    }
+
+    ESP_LOGI("ADC", "ADC Sampling Complete. Here are the values:");
+    for (int i = 0; i < SAMPLES; i++) {
+        ESP_LOGI("ADC", "Sample[%d]: %d", i, samples[i]);
     }
 }
 
@@ -128,12 +134,11 @@ float get_dominant_frequency() {
 
     // Copy ADC data
     for (int i = 0; i < SAMPLES; i++) {
-        in[i] = samples[i];
+        in[i] = (float)samples[i];
     }
 
     // Perform FFT
     kiss_fftr(cfg, in, out);
-    free(cfg);
 
     // Find peak frequency
     int max_idx = 1;
@@ -149,6 +154,7 @@ float get_dominant_frequency() {
     // Calculate frequency
     float frequency = (max_idx * SAMPLING_FREQUENCY) / SAMPLES;
     
+    free(cfg);
     free(in);
     free(out);
     
