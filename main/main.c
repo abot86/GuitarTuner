@@ -43,8 +43,6 @@
 #define SCL_PIN GPIO_NUM_18
 #define RST_PIN GPIO_NUM_21
 
-#define BUTTON_PIN  GPIO_NUM_26
-
 #define CLOCK_HZ    (400 * 1000)
 #define I2C_ADDR    0x3C
 #define I2C_HOST    0
@@ -55,10 +53,10 @@
 #define LCD_CMD_BITS    8
 #define LCD_PARAM_BITS  8
 
-#define SAMPLES 1024
-#define SAMPLING_FREQUENCY  16000   // Adjust as needed
+#define SAMPLES 4096
+#define SAMPLING_FREQUENCY  4096   // Adjust as needed
 
-int16_t samples[SAMPLES];   // ADC Sampling
+float samples[SAMPLES];   // ADC Sampling
 
 // Frequency to musical note mapping
 typedef struct {
@@ -85,6 +83,7 @@ static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io,
 }
 
 char *detected_note = "Unknown";
+float detected_cents = 0.0;
 
 // Label Object
 lv_obj_t* note_label = NULL;
@@ -96,69 +95,91 @@ char note_num[50];
 static void display() {
     lv_obj_t *scr = lv_disp_get_scr_act(disp_handle);
     if (lvgl_port_lock(0)) {
-        ESP_LOGI("DISPLAY", "Updating OLED display...");
         lv_obj_clean(scr);
 
         note_label = lv_label_create(scr);
         lv_obj_set_style_text_font(note_label, &lv_font_montserrat_14, 0); 
         lv_obj_align(note_label, LV_ALIGN_TOP_MID, 0, 0);
-        snprintf(note_num, sizeof(note_num), "Note: %s", detected_note);
-        lv_label_set_text(note_label, note_num);
 
-        ESP_LOGI("DISPLAY", "Detected Note: %s", detected_note);
+        char note_display[50];
+        snprintf(note_display, sizeof(note_display), "%s (%.2f)", detected_note, detected_cents);
+        lv_label_set_text(note_label, note_display);
 
         lvgl_port_unlock();
     }
 }
 
 
+#define FILTER_SIZE 10
+int filter_buffer[FILTER_SIZE];
+int filter_index = 0;
+
+int apply_moving_average(int new_sample) {
+    filter_buffer[filter_index] = new_sample;
+    filter_index = (filter_index + 1) % FILTER_SIZE;
+
+    // Calculate average of last N samples
+    int sum = 0;
+    for (int i = 0; i < FILTER_SIZE; i++) {
+        sum += filter_buffer[i];
+    }
+    return sum / FILTER_SIZE;
+}
+
+
 // ADC reading 
 static void read_analog() {
     for (int i = 0; i < SAMPLES; i++) {
-        int raw_value = adc1_get_raw(ADC_CHANNEL);
-        samples[i] = raw_value;
+        float raw_value = apply_moving_average(adc1_get_raw(ADC_CHANNEL));
+        // ESP_LOGI("ADC", "Raw Val: %f", raw_value);
+
+        float dc_offset = 1.25 * (4095.0 / 3.3);
+        float max_amplitude = (2.0 / 3.3) * 4095.0;
+        samples[i] = 1.5 * (raw_value - dc_offset) / (max_amplitude / 2);
+
         ets_delay_us(1000000 / SAMPLING_FREQUENCY);
     }
 
+    /**
     ESP_LOGI("ADC", "ADC Sampling Complete. Here are the values:");
     for (int i = 0; i < SAMPLES; i++) {
-        ESP_LOGI("ADC", "Sample[%d]: %d", i, samples[i]);
+        ESP_LOGI("ADC", "Sample[%d]: %f", i, samples[i]);
     }
+    **/
+    
 }
 
 // Perform FFT and find dominant frequency
 float get_dominant_frequency() {
     kiss_fftr_cfg cfg = kiss_fftr_alloc(SAMPLES, 0, NULL, NULL);
-    kiss_fft_scalar *in = (kiss_fft_scalar*)malloc(sizeof(kiss_fft_scalar) * SAMPLES);
-    kiss_fft_cpx *out = (kiss_fft_cpx*)malloc(sizeof(kiss_fft_cpx) * (SAMPLES/2 + 1));
+    kiss_fft_cpx *out = (kiss_fft_cpx*)malloc(sizeof(kiss_fft_cpx) * (SAMPLES / 2 + 1));
 
-    // Copy ADC data
-    for (int i = 0; i < SAMPLES; i++) {
-        in[i] = (float)samples[i];
-    }
+    // Apply FFT
+    kiss_fftr(cfg, samples, out);
 
-    // Perform FFT
-    kiss_fftr(cfg, in, out);
-
-    // Find peak frequency
     int max_idx = 1;
-    float max_magnitude = 0;
+    float max_mag = 0;
+
     for (int i = 1; i < SAMPLES / 2; i++) {
         float magnitude = sqrt(out[i].r * out[i].r + out[i].i * out[i].i);
-        if (magnitude > max_magnitude) {
-            max_magnitude = magnitude;
+        if (magnitude > max_mag) {
+            max_mag = magnitude;
             max_idx = i;
         }
     }
 
-    // Calculate frequency
-    float frequency = (max_idx * SAMPLING_FREQUENCY) / SAMPLES;
-    
+    // Quadratic Interpolation for more accuracy
+    float f_bin = (float)SAMPLING_FREQUENCY / SAMPLES;
+    float left = sqrt(out[max_idx - 1].r * out[max_idx - 1].r + out[max_idx - 1].i * out[max_idx - 1].i);
+    float right = sqrt(out[max_idx + 1].r * out[max_idx + 1].r + out[max_idx + 1].i * out[max_idx + 1].i);
+
+    float shift = 0.5 * (left - right) / (left - 2 * max_mag + right);
+    float dominant_freq = (max_idx + shift) * f_bin;
+
     free(cfg);
-    free(in);
     free(out);
-    
-    return frequency;
+    ESP_LOGI("DOMINANT FREQ", "freq: %f", dominant_freq);
+    return dominant_freq;
 }
 
 
@@ -166,13 +187,19 @@ float get_dominant_frequency() {
 char* get_note_from_freq(float freq) {
     float minDiff = 1000;
     char* bestNote = "n/a";
+    float bestFreq = 0;
+    
     for (int i = 0; i < sizeof(noteTable)/sizeof(Note); i++) {
         float diff = fabs(freq - noteTable[i].freq);
         if (diff < minDiff) {
             minDiff = diff;
             bestNote = noteTable[i].note;
+            bestFreq = noteTable[i].freq;
         }
     }
+
+    // Calculate cents offset from detected note
+    detected_cents = 1200 * log2(freq / bestFreq);
     return bestNote;
 }
 
@@ -186,15 +213,7 @@ static void timer_callback(void *arg) {
 }
 
 void app_main(void) {
-    // Configure GPIO input w/ interrupt on any edge
-    gpio_config_t button_conf = {
-        .pin_bit_mask = (1ULL << BUTTON_PIN),
-        .mode = GPIO_MODE_INPUT,
-        .intr_type = GPIO_INTR_ANYEDGE
-    };
-    gpio_config(&button_conf);
-
-    // Configure ADC for TMP36
+    // Configure ADC
     adc1_config_width(ADC_WIDTH_BIT_12);
     adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN_DB_12);
 

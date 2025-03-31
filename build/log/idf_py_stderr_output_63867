@@ -1,0 +1,465 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4200674d: uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4200674d: uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4037e08e: vPortClearInterruptMaskFromISR at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) xTaskGetSchedulerState at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5028
+0x40376c2b: lock_acquire_generic at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:126
+0x40376d55: _lock_acquire_recursive at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:162
+0x4200850d: usb_serial_jtag_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_vfs.c:190
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008711: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:73
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037e08e: vPortClearInterruptMaskFromISR at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) xTaskGetSchedulerState at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:5028
+0x4037b580: xQueueGenericSend at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:941
+0x4037b712: xQueueGiveMutexRecursive at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:789
+0x40376ceb: lock_release_generic at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:197
+0x40376d95: _lock_release_recursive at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:211
+0x40376e96: __retarget_lock_release_recursive at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:347
+0x4204bfef: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1779 (discriminator 3)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42049d86: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1185 (discriminator 84)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42006752: uart_ll_get_txfifo_len at /Users/aayushgoyal/esp/esp-idf/components/hal/esp32s3/include/hal/uart_ll.h:410
+ (inlined by) uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:170
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40033651: __muldf3 in ROM
+0x42043e79: __kernel_sin at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/k_sin.c:76
+0x420439fe: cos at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/s_cos.c:77
+0x42009d3c: kiss_fftr_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:58
+0x4200990b: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:148
+0x42009a22: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:200
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f77e: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fb94: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4200674d: uart_tx_char at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:168
+0x420075ff: uart_write at /Users/aayushgoyal/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c:223
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x42045ece: write at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x42008708: console_write at /Users/aayushgoyal/esp/esp-idf/components/esp_vfs_console/vfs_console.c:71
+0x42008d12: esp_vfs_write at /Users/aayushgoyal/esp/esp-idf/components/vfs/vfs.c:945 (discriminator 4)
+0x4204587a: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42044ed1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x42044f22: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42045585: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x4204c5b3: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4204bfba: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x420458f1: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420570ba: esp_log_writev at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:34
+0x403823d9: esp_log_write at /Users/aayushgoyal/esp/esp-idf/components/log/src/os/log_write.c:44
+0x420098ee: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:142 (discriminator 1)
+0x42009a1f: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:199
+0x4204082e: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x4204087d: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m
