@@ -71,7 +71,7 @@ typedef struct {
 
 // Default: random??
 // For E2, getting 186 (consistent)
-// For A2, getting 248 (occasionally 124?)
+// For A2, getting 124 (occasionally 248?)
 // For D3, getting 166 (consistent)
 // For G3, getting 221 (consistent)
 // for B3, getting 279 (consistent)
@@ -93,7 +93,6 @@ static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io,
 }
 
 char *detected_note = "Unknown";
-float detected_cents = 0.0;
 
 // Label Object
 lv_obj_t* note_label = NULL;
@@ -110,10 +109,6 @@ static void display() {
         note_label = lv_label_create(scr);
         lv_obj_set_style_text_font(note_label, &lv_font_montserrat_14, 0); 
         lv_obj_align(note_label, LV_ALIGN_TOP_MID, 0, 0);
-
-        char note_display[50];
-        snprintf(note_display, sizeof(note_display), "%s (%.2f)", detected_note, detected_cents);
-        lv_label_set_text(note_label, note_display);
 
         lvgl_port_unlock();
     }
@@ -217,8 +212,6 @@ char* get_note_from_freq(float freq) {
         }
     }
 
-    // Calculate cents offset from detected note
-    detected_cents = 1200 * log2(freq / bestFreq);
     return bestNote;
 }
 

@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "main",
-    "project_version":    "1f1d4ee-dirty",
+    "project_version":    "28f3e07-dirty",
     "project_path":       "/Users/aayushgoyal/esp/esp-idf/GuitarTuner",
     "idf_path":           "/Users/aayushgoyal/esp/esp-idf",
     "build_dir":          "/Users/aayushgoyal/esp/esp-idf/GuitarTuner/build",
