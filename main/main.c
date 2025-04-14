@@ -45,6 +45,9 @@
 #define SCL_PIN GPIO_NUM_18
 #define RST_PIN GPIO_NUM_21
 
+#define MOTOR_IN1 GPIO_NUM_5
+#define MOTOR_IN2 GPIO_NUM_4
+
 #define CLOCK_HZ    (400 * 1000)
 #define I2C_ADDR    0x3C
 #define I2C_HOST    0
@@ -57,6 +60,9 @@
 
 #define SAMPLES 4096
 #define SAMPLING_FREQUENCY  4096   // Adjust as needed
+
+#define TUNING_TOLERANCE 400
+#define DELAY_SCALE 100
 
 float samples[SAMPLES];   // ADC Sampling
 
@@ -236,7 +242,48 @@ static void IRAM_ATTR gpio_isr_handler(void* arg) {
     esp_timer_start_once(debounce_timer, 20000);  
 }
 
+// Calculate DC motor driving from average frequencies of polling
+static int frequency_to_motor_driver(float avg_freq, char* noteName) {
+    float ref_freq = 0.0;
+    
+    // Get reference frequency
+    int n = sizeof(noteTable) / sizeof(noteTable[0]);
+    for (int i = 0; i < n; i++) {
+        if (strcmp(noteTable[i].note, noteName) == 0) {
+            ref_freq = noteTable[i].freq;
+        }
+    }
 
+    float diff = ref_freq - avg_freq;
+    float diff_mag = fabs(ref_freq - avg_freq);
+    int delay = diff_mag * DELAY_SCALE;     // Trial and error for delay scale constant
+
+    if (diff_mag < TUNING_TOLERANCE){
+        return 0;                         // ADD WAY TO INDICATE SUCCESSFUL TUNING
+    }
+    else {
+        if (diff > 0){                      // CW and CCW depending on polarity of diff
+            gpio_set_level(MOTOR_IN1, 1);    
+            gpio_set_level(MOTOR_IN2, 0);
+            vTaskDelay(pdMS_TO_TICKS(delay));
+            return 1;
+        }
+        else{
+            gpio_set_level(MOTOR_IN1, 0);    
+            gpio_set_level(MOTOR_IN2, 1);
+            vTaskDelay(pdMS_TO_TICKS(delay));
+            return 1;
+        }
+    }
+
+}
+
+// Drive DC motor
+static void drive_motor(bool direction, float delay) {
+    gpio_set_level(MOTOR_IN1, direction);  // HIGH
+    gpio_set_level(MOTOR_IN2, !direction);  // LOW
+    vTaskDelay(pdMS_TO_TICKS(delay));
+}
 
 void app_main(void) {
     // Configure GPIO input
@@ -253,6 +300,16 @@ void app_main(void) {
         .name = "debounce_timer"
     };
     esp_timer_create(&debounce_timer_args, &debounce_timer);
+    
+    // Configure motor driver outputs
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << MOTOR_IN1) | (1ULL << MOTOR_IN2),
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = 0,
+        .pull_down_en = 0,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf);
 
     // Configure ADC
     adc1_config_width(ADC_WIDTH_BIT_12);
