@@ -1,0 +1,773 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0;33m--- 0x42009dca: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:69
+[0m
+[0;33m--- 0x40054bf0: __divdf3 in ROM
+0x40054c0f: __divdf3 in ROM
+[0m
+[0;33m--- 0x42009dc7: kiss_fftr at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:64
+0x4200991a: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:184
+0x42009a9a: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:250
+0x4204098a: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x420409d9: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40375b88: esp_restart_noos at /Users/aayushgoyal/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:160
+[0m
+[0m

@@ -1,0 +1,32 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/bootloader/esp-idf/esptool_py && /Users/aayushgoyal/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/aayushgoyal/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/bootloader/bootloader.bin
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:17:
+/Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:18:
+/Users/aayushgoyal/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+/Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c: In function 'app_main':
+/Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:339:40: warning: unused variable 'cbs' [-Wunused-variable]
+  339 |     const esp_lcd_panel_io_callbacks_t cbs = {
+      |                                        ^~~
+/Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:317:15: warning: unused variable 'err' [-Wunused-variable]
+  317 |     esp_err_t err = lvgl_port_init(&lvgl_cfg);
+      |               ^~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable main.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/main.bin
+[9/9] cd /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/esp-idf/esptool_py && /Users/aayushgoyal/.espressif/python_env/idf5.4_py3.13_env/bin/python /Users/aayushgoyal/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/partition_table/partition-table.bin /Users/aayushgoyal/esp/esp-idf/GuitarTuner/build/main.bin
+main.bin binary size 0x7db40 bytes. Smallest app partition is 0x100000 bytes. 0x824c0 bytes (51%) free.

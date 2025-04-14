@@ -1,0 +1,141 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  8 2025 00:52:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v1.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c060020 size=12c7ch ( 76924) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00022ca4 vaddr=3fc94800 size=02ba0h ( 11168) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0002584c vaddr=40374000 size=0a7cch ( 42956) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=57b80h (359296) map[0m
+[0;32mI (179) esp_image: segment 4: paddr=00087ba8 vaddr=4037e7cc size=05f48h ( 24392) load[0m
+[0;32mI (184) esp_image: segment 5: paddr=0008daf8 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     main[0m
+[0;32mI (217) app_init: App version:      1f1d4ee-dirty[0m
+[0;32mI (222) app_init: Compile time:     Apr  8 2025 00:52:18[0m
+[0;32mI (227) app_init: ELF file SHA256:  658803fde...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (235) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (238) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (242) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (246) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (253) heap_init: At 3FCAC028 len 0003D6E8 (245 KiB): RAM[0m
+[0;32mI (258) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (263) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: gd[0m
+[0;32mI (277) spi_flash: flash io: dio[0m
+[0;33mW (280) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (292) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (302) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (309) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (315) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (322) main_task: Started on CPU0[0m
+[0;32mI (332) main_task: Calling app_main()[0m
+[0;32mI (332) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:3 [0m
+[0;32mI (342) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (462) LVGL: Starting LVGL task[0m
+[0;32mI (472) main_task: Returned from app_main()[0m
+[0;32mI (64712) DOMINANT FREQ: freq: 39.237717[0m
+[0;32mI (66052) DOMINANT FREQ: freq: 37.150051[0m
+[0;32mI (67402) DOMINANT FREQ: freq: 30.955721[0m
+[0;32mI (68752) DOMINANT FREQ: freq: 104.129410[0m
+[0;32mI (70102) DOMINANT FREQ: freq: 91.798088[0m
+[0;32mI (71452) DOMINANT FREQ: freq: 91.790794[0m
+[0;32mI (72802) DOMINANT FREQ: freq: 91.740692[0m
+[0;32mI (74152) DOMINANT FREQ: freq: 91.857826[0m
+[0;32mI (75502) DOMINANT FREQ: freq: 91.339348[0m
+[0;32mI (76852) DOMINANT FREQ: freq: 91.476295[0m
+[0;32mI (89422) DOMINANT FREQ: freq: 130.997482[0m
+[0;32mI (90762) DOMINANT FREQ: freq: 129.015381[0m
+[0;32mI (92112) DOMINANT FREQ: freq: 122.940865[0m
+[0;32mI (93462) DOMINANT FREQ: freq: 122.801971[0m
+[0;32mI (94812) DOMINANT FREQ: freq: 122.769051[0m
+[0;32mI (96162) DOMINANT FREQ: freq: 122.854095[0m
+[0;32mI (97512) DOMINANT FREQ: freq: 122.858780[0m
+[0;32mI (98862) DOMINANT FREQ: freq: 122.746490[0m
+[0;32mI (100212) DOMINANT FREQ: freq: 122.649246[0m
+[0;32mI (101562) DOMINANT FREQ: freq: 124.036484[0m
+[0;32mI (167662) DOMINANT FREQ: freq: 32.328079[0m
+[0;32mI (169002) DOMINANT FREQ: freq: 17.303078[0m
+[0;32mI (170352) DOMINANT FREQ: freq: 16.052361[0m
+[0;32mI (171702) DOMINANT FREQ: freq: 17.723881[0m
+[0;32mI (173052) DOMINANT FREQ: freq: 105.282257[0m
+[0;32mI (174402) DOMINANT FREQ: freq: 67.036331[0m
+[0;32mI (175752) DOMINANT FREQ: freq: 34.929367[0m
+[0;32mI (177102) DOMINANT FREQ: freq: 183.658722[0m
+[0;32mI (178452) DOMINANT FREQ: freq: 91.766472[0m
+[0;32mI (179802) DOMINANT FREQ: freq: 91.765076[0m
+[0;32mI (190742) DOMINANT FREQ: freq: 36.082855[0m
+[0;32mI (192082) DOMINANT FREQ: freq: 183.559113[0m
+[0;32mI (193432) DOMINANT FREQ: freq: 91.957466[0m
+[0;32mI (194782) DOMINANT FREQ: freq: 183.578827[0m
+[0;32mI (196132) DOMINANT FREQ: freq: 183.739716[0m
+[0;32mI (197482) DOMINANT FREQ: freq: 91.269104[0m
+[0;32mI (198832) DOMINANT FREQ: freq: 183.762146[0m
+[0;32mI (200182) DOMINANT FREQ: freq: 183.810638[0m
+[0;32mI (201532) DOMINANT FREQ: freq: 184.944580[0m
+[0;32mI (202882) DOMINANT FREQ: freq: 182.920731[0m
+[0;32mI (212662) DOMINANT FREQ: freq: 68.896965[0m
+[0;32mI (214012) DOMINANT FREQ: freq: 183.978851[0m
+[0;32mI (215362) DOMINANT FREQ: freq: 183.048996[0m
+[0;32mI (216712) DOMINANT FREQ: freq: 183.190643[0m
+[0;32mI (218062) DOMINANT FREQ: freq: 183.945724[0m
+[0;32mI (219412) DOMINANT FREQ: freq: 182.399704[0m
+[0;32mI (220762) DOMINANT FREQ: freq: 183.110016[0m
+[0;32mI (222112) DOMINANT FREQ: freq: 183.968933[0m
+[0;32mI (223462) DOMINANT FREQ: freq: 183.096542[0m
+[0;32mI (224812) DOMINANT FREQ: freq: 182.990448[0m
+[0;32mI (232802) DOMINANT FREQ: freq: 39.118427[0m
+[0;32mI (234142) DOMINANT FREQ: freq: 122.828667[0m
+[0;32mI (235492) DOMINANT FREQ: freq: 122.482330[0m
+[0;32mI (236842) DOMINANT FREQ: freq: 122.901527[0m
+[0;32mI (238192) DOMINANT FREQ: freq: 122.868675[0m
+[0;32mI (239542) DOMINANT FREQ: freq: 122.320328[0m
+[0;32mI (240892) DOMINANT FREQ: freq: 122.869476[0m
+[0;32mI (242242) DOMINANT FREQ: freq: 122.933144[0m
+[0;32mI (243592) DOMINANT FREQ: freq: 122.000504[0m
+[0;32mI (244942) DOMINANT FREQ: freq: 123.293266[0m
+[0;32mI (252502) DOMINANT FREQ: freq: 36.969631[0m
+[0;32mI (253852) DOMINANT FREQ: freq: 163.065689[0m
+[0;32mI (255202) DOMINANT FREQ: freq: 162.264740[0m
+[0;32mI (256552) DOMINANT FREQ: freq: 163.313660[0m
+[0;32mI (257902) DOMINANT FREQ: freq: 163.127136[0m
+[0;32mI (259252) DOMINANT FREQ: freq: 163.052719[0m
+[0;32mI (260602) DOMINANT FREQ: freq: 163.125519[0m
+[0;32mI (261952) DOMINANT FREQ: freq: 163.129883[0m
+[0;32mI (263302) DOMINANT FREQ: freq: 163.639526[0m
+[0;32mI (264652) DOMINANT FREQ: freq: 163.783981[0m
+[0;32mI (269612) DOMINANT FREQ: freq: 163.875015[0m
+[0;32mI (270952) DOMINANT FREQ: freq: 219.302994[0m
+[0;32mI (272302) DOMINANT FREQ: freq: 220.057861[0m
+[0;32mI (273652) DOMINANT FREQ: freq: 219.931747[0m
+[0;32mI (275002) DOMINANT FREQ: freq: 219.018997[0m
+[0;32mI (276352) DOMINANT FREQ: freq: 219.144516[0m
+[0;32mI (277702) DOMINANT FREQ: freq: 219.382141[0m
+[0;32mI (279052) 

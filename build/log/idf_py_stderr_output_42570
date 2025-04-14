@@ -1,0 +1,508 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/cu.usbserial-0001 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4003361d: __muldf3 in ROM
+0x42043e85: __kernel_sin at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/k_sin.c:73
+0x42043ae5: cos at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/s_cos.c:74
+0x4200a24c: kiss_fft_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fft.c:362
+0x42009cfd: kiss_fftr_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:51
+0x42009896: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:160
+0x42009a6e: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:216
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037bf66: vPortClearInterruptMaskFromISR at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x42056ddf: vPortExitCriticalSafe at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:596
+ (inlined by) s_sar_power_release at /Users/aayushgoyal/esp/esp-idf/components/esp_hw_support/port/esp32s3/sar_periph_ctrl.c:80
+0x42056e1b: sar_periph_ctrl_adc_oneshot_power_release at /Users/aayushgoyal/esp/esp-idf/components/esp_hw_support/port/esp32s3/sar_periph_ctrl.c:108
+0x42040f3d: adc1_lock_release at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:377
+0x42041034: adc1_get_raw at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:406
+0x42009830: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:139
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4037b580: xQueueGenericSend at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:941
+0x40376cfd: lock_release_generic at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:199
+0x40376d85: _lock_release at /Users/aayushgoyal/esp/esp-idf/components/newlib/locks.c:206
+0x42040f46: adc1_lock_release at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:378
+0x42041034: adc1_get_raw at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:406
+0x42009830: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:139
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4003361d: __muldf3 in ROM
+0x42043eb1: __kernel_sin at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/k_sin.c:74
+0x42043caa: sin at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/s_sin.c:113
+0x4200a264: kiss_fft_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fft.c:362 (discriminator 1)
+0x42009cfd: kiss_fftr_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:51
+0x42009896: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:160
+0x42009a6e: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:216
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037bf66: vPortClearInterruptMaskFromISR at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x42040f01: adc1_rtc_mode_acquire at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:367
+0x42040f81: adc1_get_raw at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:386
+0x42009830: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:139
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40033677: __muldf3 in ROM
+0x42043e85: __kernel_sin at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/k_sin.c:73
+0x42043b02: cos at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/s_cos.c:77
+0x4200a24c: kiss_fft_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fft.c:362
+0x42009cfd: kiss_fftr_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:51
+0x42009896: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:160
+0x42009a6e: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:216
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400559dd: _xtos_set_intlevel in ROM
+0x4037bf66: vPortClearInterruptMaskFromISR at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:560
+ (inlined by) vPortExitCritical at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:514
+0x42041031: adc1_get_raw at /Users/aayushgoyal/esp/esp-idf/components/driver/deprecated/adc_legacy.c:404
+0x42009830: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:139
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x42044886: __ieee754_sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_sqrt.c:163 (discriminator 2)
+0x42043a3f: sqrt at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/w_sqrt.c:61
+0x420098d8: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:170
+0x42009a6e: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:216
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a79: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a73: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400335e3: __muldf3 in ROM
+0x420444db: __ieee754_rem_pio2 at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/e_rem_pio2.c:131
+0x42043ac1: cos at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libm/math/s_cos.c:71
+0x4200a24c: kiss_fft_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fft.c:362
+0x42009cfd: kiss_fftr_alloc at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/kiss_fftr.c:51
+0x42009896: get_dominant_frequency at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:160
+0x42009a6e: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:216
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x4203f80a: task_wdt_timeout_handling at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x4203fc20: task_wdt_isr at /Users/aayushgoyal/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x403774e5: _xt_lowint1 at /Users/aayushgoyal/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40041a76: ets_delay_us in ROM
+0x42009878: read_analog at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:146
+0x42009a6b: timer_callback at /Users/aayushgoyal/esp/esp-idf/GuitarTuner/main/main.c:215
+0x420408ba: timer_process_alarm at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:435
+0x42040909: timer_task at /Users/aayushgoyal/esp/esp-idf/components/esp_timer/src/esp_timer.c:461 (discriminator 1)
+0x4037bbcd: vPortTaskWrapper at /Users/aayushgoyal/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

@@ -1,0 +1,1014 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  8 2025 00:52:53[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v1.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c060020 size=12b64h ( 76644) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00022b8c vaddr=3fc94600 size=02ba0h ( 11168) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=00025734 vaddr=40374000 size=0a8e4h ( 43236) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=575c4h (357828) map[0m
+[0;32mI (179) esp_image: segment 4: paddr=000875ec vaddr=4037e8e4 size=05c44h ( 23620) load[0m
+[0;32mI (184) esp_image: segment 5: paddr=0008d238 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     main[0m
+[0;32mI (217) app_init: App version:      1f1d4ee-dirty[0m
+[0;32mI (221) app_init: Compile time:     Apr  8 2025 00:52:18[0m
+[0;32mI (226) app_init: ELF file SHA256:  fc1f1ea2a...[0m
+[0;32mI (231) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (234) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (238) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (242) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (246) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (252) heap_init: At 3FCABE28 len 0003D8E8 (246 KiB): RAM[0m
+[0;32mI (258) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (263) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: gd[0m
+[0;32mI (276) spi_flash: flash io: dio[0m
+[0;33mW (279) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (292) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (302) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (309) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (315) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (322) main_task: Started on CPU0[0m
+[0;32mI (332) main_task: Calling app_main()[0m
+[0;32mI (332) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) LVGL: Starting LVGL task[0m
+[0;32mI (462) main_task: Returned from app_main()[0m
+[0;32mI (2582) DOMINANT FREQ: freq: 33.815475[0m
+[0;32mI (3832) DOMINANT FREQ: freq: 33.345993[0m
+[0;32mI (5092) DOMINANT FREQ: freq: 33.861488[0m
+[1;31mE (6342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (6342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (6342) task_wdt: Tasks currently running:[0m
+[1;31mE (6342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (6342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (6342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x420098A0:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (6382) DOMINANT FREQ: freq: 33.672813[0m
+[0;32mI (7632) DOMINANT FREQ: freq: 33.545391[0m
+[0;32mI (8892) DOMINANT FREQ: freq: 33.887074[0m
+[0;32mI (10142) DOMINANT FREQ: freq: 33.644066[0m
+[1;31mE (11342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (11342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (11342) task_wdt: Tasks currently running:[0m
+[1;31mE (11342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (11342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (11342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x42044633:0x3FCAE240 0x42043C62:0x3FCAE2A0 0x4200A250:0x3FCAE2D0 0x42009CE9:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (11442) DOMINANT FREQ: freq: 33.593094[0m
+[0;32mI (12692) DOMINANT FREQ: freq: 33.893250[0m
+[0;32mI (13952) DOMINANT FREQ: freq: 33.540203[0m
+[0;32mI (15202) DOMINANT FREQ: freq: 33.618542[0m
+[1;31mE (16342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (16342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (16342) task_wdt: Tasks currently running:[0m
+[1;31mE (16342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (16342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (16342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40033629:0x3FCAE2B0 0x4200A201:0x3FCAE2D0 0x42009CE9:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (16502) DOMINANT FREQ: freq: 33.944096[0m
+[0;32mI (17752) DOMINANT FREQ: freq: 33.558014[0m
+[0;32mI (19012) DOMINANT FREQ: freq: 33.548935[0m
+[0;32mI (20262) DOMINANT FREQ: freq: 33.961437[0m
+[1;31mE (21342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (21342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (21342) task_wdt: Tasks currently running:[0m
+[1;31mE (21342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (21342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (21342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (21552) DOMINANT FREQ: freq: 33.794250[0m
+[0;32mI (22812) DOMINANT FREQ: freq: 186.008514[0m
+[0;32mI (24062) DOMINANT FREQ: freq: 186.021912[0m
+[0;32mI (25322) DOMINANT FREQ: freq: 185.881226[0m
+[1;31mE (26342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (26342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (26342) task_wdt: Tasks currently running:[0m
+[1;31mE (26342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (26342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (26342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (26612) DOMINANT FREQ: freq: 186.021515[0m
+[0;32mI (27862) DOMINANT FREQ: freq: 185.975098[0m
+[0;32mI (29122) DOMINANT FREQ: freq: 186.019058[0m
+[0;32mI (30372) DOMINANT FREQ: freq: 186.095367[0m
+[1;31mE (31342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (31342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (31342) task_wdt: Tasks currently running:[0m
+[1;31mE (31342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (31342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (31342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (31662) DOMINANT FREQ: freq: 185.973083[0m
+[0;32mI (32922) DOMINANT FREQ: freq: 186.067169[0m
+[0;32mI (34172) DOMINANT FREQ: freq: 186.067169[0m
+[0;32mI (35432) DOMINANT FREQ: freq: 124.038010[0m
+[1;31mE (36342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (36342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (36342) task_wdt: Tasks currently running:[0m
+[1;31mE (36342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (36342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (36342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (36722) DOMINANT FREQ: freq: 247.980927[0m
+[0;32mI (37972) DOMINANT FREQ: freq: 124.035416[0m
+[0;32mI (39232) DOMINANT FREQ: freq: 1.529381[0m
+[0;32mI (40482) DOMINANT FREQ: freq: 1.529381[0m
+[1;31mE (41342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (41342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (41342) task_wdt: Tasks currently running:[0m
+[1;31mE (41342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (41342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (41342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (41772) DOMINANT FREQ: freq: 248.146774[0m
+[0;32mI (43032) DOMINANT FREQ: freq: 248.146774[0m
+[0;32mI (44282) DOMINANT FREQ: freq: 248.320160[0m
+[0;32mI (45542) DOMINANT FREQ: freq: 1.525449[0m
+[1;31mE (46342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (46342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (46342) task_wdt: Tasks currently running:[0m
+[1;31mE (46342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (46342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (46342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (46832) DOMINANT FREQ: freq: 33.845997[0m
+[0;32mI (48082) DOMINANT FREQ: freq: 33.848064[0m
+[0;32mI (49342) DOMINANT FREQ: freq: 33.705963[0m
+[0;32mI (50592) DOMINANT FREQ: freq: 33.689800[0m
+[1;31mE (51342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (51342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (51342) task_wdt: Tasks currently running:[0m
+[1;31mE (51342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (51342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (51342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (51892) DOMINANT FREQ: freq: 33.923809[0m
+[0;32mI (53142) DOMINANT FREQ: freq: 13.158334[0m
+[0;32mI (54402) DOMINANT FREQ: freq: 33.559841[0m
+[0;32mI (55652) DOMINANT FREQ: freq: 33.739559[0m
+[1;31mE (56342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (56342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (56342) task_wdt: Tasks currently running:[0m
+[1;31mE (56342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (56342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (56342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (56942) DOMINANT FREQ: freq: 248.037750[0m
+[0;32mI (58202) DOMINANT FREQ: freq: 248.250168[0m
+[0;32mI (59452) DOMINANT FREQ: freq: 248.250168[0m
+[0;32mI (60712) DOMINANT FREQ: freq: 248.241852[0m
+[1;31mE (61342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (61342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (61342) task_wdt: Tasks currently running:[0m
+[1;31mE (61342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (61342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (61342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (62002) DOMINANT FREQ: freq: 248.241852[0m
+[0;32mI (63252) DOMINANT FREQ: freq: 166.006638[0m
+[0;32mI (64512) DOMINANT FREQ: freq: 166.053223[0m
+[0;32mI (65762) DOMINANT FREQ: freq: 165.978180[0m
+[1;31mE (66342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (66342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (66342) task_wdt: Tasks currently running:[0m
+[1;31mE (66342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (66342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (66342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (67052) DOMINANT FREQ: freq: 166.825500[0m
+[0;32mI (68312) DOMINANT FREQ: freq: 165.971680[0m
+[0;32mI (69562) DOMINANT FREQ: freq: 165.959290[0m
+[0;32mI (70822) DOMINANT FREQ: freq: 165.964722[0m
+[1;31mE (71342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (71342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (71342) task_wdt: Tasks currently running:[0m
+[1;31mE (71342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (71342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (71342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (72112) DOMINANT FREQ: freq: 165.943314[0m
+[0;32mI (73362) DOMINANT FREQ: freq: 221.252090[0m
+[0;32mI (74622) DOMINANT FREQ: freq: 221.130905[0m
+[0;32mI (75872) DOMINANT FREQ: freq: 220.954941[0m
+[1;31mE (76342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (76342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (76342) task_wdt: Tasks currently running:[0m
+[1;31mE (76342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (76342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (76342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (77162) DOMINANT FREQ: freq: 221.467575[0m
+[0;32mI (78422) DOMINANT FREQ: freq: 33.666275[0m
+[0;32mI (79672) DOMINANT FREQ: freq: 33.671993[0m
+[0;32mI (80932) DOMINANT FREQ: freq: 33.881657[0m
+[1;31mE (81342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (81342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (81342) task_wdt: Tasks currently running:[0m
+[1;31mE (81342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (81342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (81342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (82222) DOMINANT FREQ: freq: 33.737797[0m
+[0;32mI (83472) DOMINANT FREQ: freq: 33.687260[0m
+[0;32mI (84732) DOMINANT FREQ: freq: 33.891479[0m
+[0;32mI (85982) DOMINANT FREQ: freq: 33.730072[0m
+[1;31mE (86342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (86342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (86342) task_wdt: Tasks currently running:[0m
+[1;31mE (86342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (86342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (86342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (87272) DOMINANT FREQ: freq: 33.895344[0m
+[0;32mI (88532) DOMINANT FREQ: freq: 33.909157[0m
+[0;32mI (89782) DOMINANT FREQ: freq: 33.438190[0m
+[0;32mI (91042) DOMINANT FREQ: freq: 33.730782[0m
+[1;31mE (91342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (91342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (91342) task_wdt: Tasks currently running:[0m
+[1;31mE (91342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (91342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (91342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (92332) DOMINANT FREQ: freq: 33.862041[0m
+[0;32mI (93582) DOMINANT FREQ: freq: 33.452503[0m
+[0;32mI (94842) DOMINANT FREQ: freq: 33.811943[0m
+[0;32mI (96092) DOMINANT FREQ: freq: 33.843643[0m
+[1;31mE (96342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (96342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (96342) task_wdt: Tasks currently running:[0m
+[1;31mE (96342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (96342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (96342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (97382) DOMINANT FREQ: freq: 33.800426[0m
+[0;32mI (98642) DOMINANT FREQ: freq: 33.910503[0m
+[0;32mI (99892) DOMINANT FREQ: freq: 33.724316[0m
+[0;32mI (101152) DOMINANT FREQ: freq: 33.507011[0m
+[1;31mE (101342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (101342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (101342) task_wdt: Tasks currently running:[0m
+[1;31mE (101342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (101342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (101342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (102442) DOMINANT FREQ: freq: 33.993095[0m
+[0;32mI (103692) DOMINANT FREQ: freq: 33.690575[0m
+[0;32mI (104952) DOMINANT FREQ: freq: 33.557655[0m
+[0;32mI (106202) DOMINANT FREQ: freq: 33.809292[0m
+[1;31mE (106342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (106342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (106342) task_wdt: Tasks currently running:[0m
+[1;31mE (106342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (106342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (106342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (107502) DOMINANT FREQ: freq: 242.767548[0m
+[0;32mI (108752) DOMINANT FREQ: freq: 33.745411[0m
+[0;32mI (110012) DOMINANT FREQ: freq: 33.875065[0m
+[0;32mI (111262) DOMINANT FREQ: freq: 33.409725[0m
+[1;31mE (111342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (111342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (111342) task_wdt: Tasks currently running:[0m
+[1;31mE (111342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (111342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (111342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (112552) DOMINANT FREQ: freq: 33.837479[0m
+[0;32mI (113812) DOMINANT FREQ: freq: 279.865051[0m
+[0;32mI (115062) DOMINANT FREQ: freq: 184.367218[0m
+[0;32mI (116322) DOMINANT FREQ: freq: 245.979507[0m
+[1;31mE (116342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (116342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (116342) task_wdt: Tasks currently running:[0m
+[1;31mE (116342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (116342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (116342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (117612) DOMINANT FREQ: freq: 184.130402[0m
+[0;32mI (118862) DOMINANT FREQ: freq: 164.942749[0m
+[0;32mI (120122) DOMINANT FREQ: freq: 219.782822[0m
+[1;31mE (121342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (121342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (121342) task_wdt: Tasks currently running:[0m
+[1;31mE (121342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (121342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (121342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x400335C9:0x3FCAE250 0x420444E9:0x3FCAE270 0x42043AAD:0x3FCAE2D0 0x42009D4C:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (121412) DOMINANT FREQ: freq: 219.667755[0m
+[0;32mI (122672) DOMINANT FREQ: freq: 277.192566[0m
+[0;32mI (123922) DOMINANT FREQ: freq: 277.112518[0m
+[0;32mI (125182) DOMINANT FREQ: freq: 277.010437[0m
+[1;31mE (126342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (126342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (126342) task_wdt: Tasks currently running:[0m
+[1;31mE (126342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (126342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (126342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x400024FC:0x3FCAE240 0x42043AAD:0x3FCAE2A0 0x4200A238:0x3FCAE2D0 0x42009CE9:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (126482) DOMINANT FREQ: freq: 277.010010[0m
+[0;32mI (127732) DOMINANT FREQ: freq: 277.025452[0m
+[0;32mI (128992) DOMINANT FREQ: freq: 33.758293[0m
+[0;32mI (130242) DOMINANT FREQ: freq: 33.709003[0m
+[1;31mE (131342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (131342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (131342) task_wdt: Tasks currently running:[0m
+[1;31mE (131342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (131342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (131342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (131532) DOMINANT FREQ: freq: 33.948299[0m
+[0;32mI (132792) DOMINANT FREQ: freq: 33.517769[0m
+[0;32mI (134042) DOMINANT FREQ: freq: 33.641685[0m
+[0;32mI (135302) DOMINANT FREQ: freq: 66.981430[0m
+[1;31mE (136342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (136342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (136342) task_wdt: Tasks currently running:[0m
+[1;31mE (136342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (136342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (136342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (136592) DOMINANT FREQ: freq: 33.482685[0m
+[0;32mI (137842) DOMINANT FREQ: freq: 33.634037[0m
+[0;32mI (139102) DOMINANT FREQ: freq: 33.900188[0m
+[0;32mI (140352) DOMINANT FREQ: freq: 33.687355[0m
+[1;31mE (141342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (141342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (141342) task_wdt: Tasks currently running:[0m
+[1;31mE (141342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (141342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (141342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (141642) DOMINANT FREQ: freq: 33.806541[0m
+[0;32mI (142902) DOMINANT FREQ: freq: 33.854618[0m
+[0;32mI (144152) DOMINANT FREQ: freq: 33.480881[0m
+[0;32mI (145412) DOMINANT FREQ: freq: 33.876640[0m
+[1;31mE (146342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (146342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (146342) task_wdt: Tasks currently running:[0m
+[1;31mE (146342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (146342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (146342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (146702) DOMINANT FREQ: freq: 33.934563[0m
+[0;32mI (147952) DOMINANT FREQ: freq: 33.388424[0m
+[0;32mI (149212) DOMINANT FREQ: freq: 33.945827[0m
+[0;32mI (150462) DOMINANT FREQ: freq: 33.773788[0m
+[1;31mE (151342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (151342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (151342) task_wdt: Tasks currently running:[0m
+[1;31mE (151342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (151342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (151342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (151762) DOMINANT FREQ: freq: 33.811256[0m
+[0;32mI (153012) DOMINANT FREQ: freq: 33.927765[0m
+[0;32mI (154272) DOMINANT FREQ: freq: 33.595356[0m
+[0;32mI (155522) DOMINANT FREQ: freq: 33.467384[0m
+[1;31mE (156342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (156342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (156342) task_wdt: Tasks currently running:[0m
+[1;31mE (156342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (156342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (156342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (156812) DOMINANT FREQ: freq: 53.724586[0m
+[0;32mI (158072) DOMINANT FREQ: freq: 55.010380[0m
+[0;32mI (159322) DOMINANT FREQ: freq: 33.644329[0m
+[0;32mI (160582) DOMINANT FREQ: freq: 33.931637[0m
+[1;31mE (161342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (161342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (161342) task_wdt: Tasks currently running:[0m
+[1;31mE (161342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (161342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (161342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (161872) DOMINANT FREQ: freq: 33.884178[0m
+[0;32mI (163122) DOMINANT FREQ: freq: 33.785679[0m
+[0;32mI (164382) DOMINANT FREQ: freq: 33.889984[0m
+[0;32mI (165632) DOMINANT FREQ: freq: 33.500351[0m
+[1;31mE (166342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (166342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (166342) task_wdt: Tasks currently running:[0m
+[1;31mE (166342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (166342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (166342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (166922) DOMINANT FREQ: freq: 33.916149[0m
+[0;32mI (168182) DOMINANT FREQ: freq: 33.805634[0m
+[0;32mI (169432) DOMINANT FREQ: freq: 33.364613[0m
+[0;32mI (170692) DOMINANT FREQ: freq: 33.858341[0m
+[1;31mE (171342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (171342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (171342) task_wdt: Tasks currently running:[0m
+[1;31mE (171342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (171342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (171342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (171982) DOMINANT FREQ: freq: 33.797523[0m
+[0;32mI (173232) DOMINANT FREQ: freq: 33.618305[0m
+[0;32mI (174492) DOMINANT FREQ: freq: 33.937283[0m
+[0;32mI (175742) DOMINANT FREQ: freq: 33.714077[0m
+[1;31mE (176342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (176342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (176342) task_wdt: Tasks currently running:[0m
+[1;31mE (176342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (176342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (176342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (177042) DOMINANT FREQ: freq: 33.778774[0m
+[0;32mI (178292) DOMINANT FREQ: freq: 33.972034[0m
+[0;32mI (179552) DOMINANT FREQ: freq: 33.372276[0m
+[0;32mI (180802) DOMINANT FREQ: freq: 33.553013[0m
+[1;31mE (181342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (181342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (181342) task_wdt: Tasks currently running:[0m
+[1;31mE (181342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (181342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (181342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (182092) DOMINANT FREQ: freq: 33.976692[0m
+[0;32mI (183352) DOMINANT FREQ: freq: 33.649776[0m
+[0;32mI (184602) DOMINANT FREQ: freq: 33.747688[0m
+[0;32mI (185862) DOMINANT FREQ: freq: 33.897312[0m
+[1;31mE (186342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (186342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (186342) task_wdt: Tasks currently running:[0m
+[1;31mE (186342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (186342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (186342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (187152) DOMINANT FREQ: freq: 33.821312[0m
+[0;32mI (188402) DOMINANT FREQ: freq: 33.845749[0m
+[0;32mI (189662) DOMINANT FREQ: freq: 33.762161[0m
+[0;32mI (190912) DOMINANT FREQ: freq: 33.454548[0m
+[1;31mE (191342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (191342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (191342) task_wdt: Tasks currently running:[0m
+[1;31mE (191342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (191342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (191342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (192202) DOMINANT FREQ: freq: 33.984291[0m
+[0;32mI (193462) DOMINANT FREQ: freq: 33.624630[0m
+[0;32mI (194712) DOMINANT FREQ: freq: 33.497211[0m
+[0;32mI (195972) DOMINANT FREQ: freq: 33.865356[0m
+[1;31mE (196342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (196342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (196342) task_wdt: Tasks currently running:[0m
+[1;31mE (196342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (196342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (196342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (197262) DOMINANT FREQ: freq: 33.771908[0m
+[0;32mI (198512) DOMINANT FREQ: freq: 33.203320[0m
+[0;32mI (199772) DOMINANT FREQ: freq: 180.707916[0m
+[0;32mI (201022) DOMINANT FREQ: freq: 204.356461[0m
+[1;31mE (201342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (201342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (201342) task_wdt: Tasks currently running:[0m
+[1;31mE (201342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (201342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (201342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (202322) DOMINANT FREQ: freq: 2.008803[0m
+[0;32mI (203572) DOMINANT FREQ: freq: 211.881897[0m
+[0;32mI (204832) DOMINANT FREQ: freq: 33.853043[0m
+[0;32mI (206082) DOMINANT FREQ: freq: 33.297176[0m
+[1;31mE (206342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (206342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (206342) task_wdt: Tasks currently running:[0m
+[1;31mE (206342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (206342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (206342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (207372) DOMINANT FREQ: freq: 33.986855[0m
+[0;32mI (208632) DOMINANT FREQ: freq: 33.842457[0m
+[0;32mI (209882) DOMINANT FREQ: freq: 33.816975[0m
+[0;32mI (211142) DOMINANT FREQ: freq: 33.707802[0m
+[1;31mE (211342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (211342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (211342) task_wdt: Tasks currently running:[0m
+[1;31mE (211342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (211342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (211342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (212432) DOMINANT FREQ: freq: 33.626659[0m
+[0;32mI (213682) DOMINANT FREQ: freq: 33.744984[0m
+[0;32mI (214942) DOMINANT FREQ: freq: 132.912567[0m
+[0;32mI (216192) DOMINANT FREQ: freq: 33.239273[0m
+[1;31mE (216342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (216342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (216342) task_wdt: Tasks currently running:[0m
+[1;31mE (216342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (216342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (216342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (217482) DOMINANT FREQ: freq: 33.898739[0m
+[0;32mI (218742) DOMINANT FREQ: freq: 33.805420[0m
+[0;32mI (219992) DOMINANT FREQ: freq: 33.554443[0m
+[0;32mI (221252) DOMINANT FREQ: freq: 33.917431[0m
+[1;31mE (221342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (221342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (221342) task_wdt: Tasks currently running:[0m
+[1;31mE (221342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (221342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (221342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (222542) DOMINANT FREQ: freq: 33.631706[0m
+[0;32mI (223792) DOMINANT FREQ: freq: 33.294064[0m
+[0;32mI (225052) DOMINANT FREQ: freq: 33.944393[0m
+[0;32mI (226302) DOMINANT FREQ: freq: 33.632561[0m
+[1;31mE (226342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (226342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (226342) task_wdt: Tasks currently running:[0m
+[1;31mE (226342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (226342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (226342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (227602) DOMINANT FREQ: freq: 33.331974[0m
+[0;32mI (228852) DOMINANT FREQ: freq: 33.901478[0m
+[0;32mI (230112) DOMINANT FREQ: freq: 185.642319[0m
+[1;31mE (231342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (231342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (231342) task_wdt: Tasks currently running:[0m
+[1;31mE (231342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (231342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (231342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40054BED:0x3FCAE2F0 0x42009D17:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (231402) DOMINANT FREQ: freq: 186.009583[0m
+[0;32mI (232652) DOMINANT FREQ: freq: 186.135315[0m
+[0;32mI (233912) DOMINANT FREQ: freq: 186.031143[0m
+[0;32mI (235162) DOMINANT FREQ: freq: 186.042099[0m
+[1;31mE (236342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (236342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (236342) task_wdt: Tasks currently running:[0m
+[1;31mE (236342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (236342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (236342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x4005493B:0x3FCAE260 0x42043E15:0x3FCAE270 0x42043C87:0x3FCAE2A0 0x4200A250:0x3FCAE2D0 0x42009CE9:0x3FCAE300 0x4200985E:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (236462) DOMINANT FREQ: freq: 186.069839[0m
+[0;32mI (237722) DOMINANT FREQ: freq: 186.025177[0m
+[0;32mI (238972) DOMINANT FREQ: freq: 186.069260[0m
+[0;32mI (240232) DOMINANT FREQ: freq: 186.023285[0m
+[1;31mE (241342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (241342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (241342) task_wdt: Tasks currently running:[0m
+[1;31mE (241342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (241342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (241342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (241522) DOMINANT FREQ: freq: 186.190964[0m
+[0;32mI (242772) DOMINANT FREQ: freq: 186.190964[0m
+[0;32mI (244032) DOMINANT FREQ: freq: 248.130661[0m
+[0;32mI (245282) DOMINANT FREQ: freq: 248.130661[0m
+[1;31mE (246342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (246342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (246342) task_wdt: Tasks currently running:[0m
+[1;31mE (246342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (246342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (246342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (246572) DOMINANT FREQ: freq: 124.077324[0m
+[0;32mI (247832) DOMINANT FREQ: freq: 124.077324[0m
+[0;32mI (249082) DOMINANT FREQ: freq: 124.053787[0m
+[0;32mI (250342) DOMINANT FREQ: freq: 124.053787[0m
+[1;31mE (251342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (251342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (251342) task_wdt: Tasks currently running:[0m
+[1;31mE (251342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (251342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (251342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (251632) DOMINANT FREQ: freq: 124.042076[0m
+[0;32mI (252882) DOMINANT FREQ: freq: 165.981476[0m
+[0;32mI (254142) DOMINANT FREQ: freq: 166.018036[0m
+[0;32mI (255392) DOMINANT FREQ: freq: 165.948151[0m
+[1;31mE (256342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (256342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (256342) task_wdt: Tasks currently running:[0m
+[1;31mE (256342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (256342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (256342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (256692) DOMINANT FREQ: freq: 165.921829[0m
+[0;32mI (257942) DOMINANT FREQ: freq: 165.934509[0m
+[0;32mI (259202) DOMINANT FREQ: freq: 165.987228[0m
+[0;32mI (260452) DOMINANT FREQ: freq: 165.990341[0m
+[1;31mE (261342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (261342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (261342) task_wdt: Tasks currently running:[0m
+[1;31mE (261342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (261342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (261342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (261742) DOMINANT FREQ: freq: 165.990341[0m
+[0;32mI (263002) DOMINANT FREQ: freq: 166.009888[0m
+[0;32mI (264252) DOMINANT FREQ: freq: 221.229462[0m
+[0;32mI (265512) DOMINANT FREQ: freq: 221.126770[0m
+[1;31mE (266342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (266342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (266342) task_wdt: Tasks currently running:[0m
+[1;31mE (266342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (266342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (266342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (266802) DOMINANT FREQ: freq: 221.113708[0m
+[0;32mI (268052) DOMINANT FREQ: freq: 221.175034[0m
+[0;32mI (269312) DOMINANT FREQ: freq: 221.580490[0m
+[0;32mI (270562) DOMINANT FREQ: freq: 221.206268[0m
+[1;31mE (271342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (271342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (271342) task_wdt: Tasks currently running:[0m
+[1;31mE (271342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (271342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (271342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (271852) DOMINANT FREQ: freq: 221.619568[0m
+[0;32mI (273112) DOMINANT FREQ: freq: 221.126801[0m
+[0;32mI (274362) DOMINANT FREQ: freq: 221.219131[0m
+[0;32mI (275622) DOMINANT FREQ: freq: 278.911865[0m
+[1;31mE (276342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (276342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (276342) task_wdt: Tasks currently running:[0m
+[1;31mE (276342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (276342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (276342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (276912) DOMINANT FREQ: freq: 279.005524[0m
+[0;32mI (278162) DOMINANT FREQ: freq: 278.013245[0m
+[0;32mI (279422) DOMINANT FREQ: freq: 279.019562[0m
+[0;32mI (280672) DOMINANT FREQ: freq: 279.071045[0m
+[1;31mE (281342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (281342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (281342) task_wdt: Tasks currently running:[0m
+[1;31mE (281342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (281342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (281342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (281962) DOMINANT FREQ: freq: 278.994873[0m
+[0;32mI (283222) DOMINANT FREQ: freq: 278.993988[0m
+[0;32mI (284472) DOMINANT FREQ: freq: 278.981537[0m
+[0;32mI (285732) DOMINANT FREQ: freq: 278.976257[0m
+[1;31mE (286342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (286342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (286342) task_wdt: Tasks currently running:[0m
+[1;31mE (286342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (286342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (286342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (287022) DOMINANT FREQ: freq: 1.526874[0m
+[0;32mI (288282) DOMINANT FREQ: freq: 33.849159[0m
+[0;32mI (289532) DOMINANT FREQ: freq: 33.849159[0m
+[0;32mI (290792) DOMINANT FREQ: freq: 33.849159[0m
+[1;31mE (291342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (291342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (291342) task_wdt: Tasks currently running:[0m
+[1;31mE (291342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (291342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (291342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (292082) DOMINANT FREQ: freq: 33.895290[0m
+[0;32mI (293332) DOMINANT FREQ: freq: 1.506596[0m
+[0;32mI (294592) DOMINANT FREQ: freq: 33.833748[0m
+[0;32mI (295842) DOMINANT FREQ: freq: 33.833748[0m
+[1;31mE (296342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (296342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (296342) task_wdt: Tasks currently running:[0m
+[1;31mE (296342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (296342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (296342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (297132) DOMINANT FREQ: freq: 33.912380[0m
+[0;32mI (298392) DOMINANT FREQ: freq: 185.703522[0m
+[0;32mI (299642) DOMINANT FREQ: freq: 33.762596[0m
+[0;32mI (300902) DOMINANT FREQ: freq: 187.467407[0m
+[1;31mE (301342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (301342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (301342) task_wdt: Tasks currently running:[0m
+[1;31mE (301342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (301342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (301342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (302192) DOMINANT FREQ: freq: 33.715271[0m
+[0;32mI (303442) DOMINANT FREQ: freq: 33.735825[0m
+[0;32mI (304702) DOMINANT FREQ: freq: 153.708176[0m
+[0;32mI (305952) DOMINANT FREQ: freq: 33.628441[0m
+[1;31mE (306342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (306342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (306342) task_wdt: Tasks currently running:[0m
+[1;31mE (306342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (306342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (306342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (307242) DOMINANT FREQ: freq: 33.945839[0m
+[0;32mI (308502) DOMINANT FREQ: freq: 33.788929[0m
+[0;32mI (309752) DOMINANT FREQ: freq: 33.555565[0m
+[0;32mI (311012) DOMINANT FREQ: freq: 33.832592[0m
+[1;31mE (311342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (311342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (311342) task_wdt: Tasks currently running:[0m
+[1;31mE (311342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (311342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (311342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (312302) DOMINANT FREQ: freq: 33.870998[0m
+[0;32mI (313562) DOMINANT FREQ: freq: 33.550243[0m
+[0;32mI (314812) DOMINANT FREQ: freq: 33.989170[0m
+[0;32mI (316072) DOMINANT FREQ: freq: 33.719349[0m
+[1;31mE (316342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (316342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (316342) task_wdt: Tasks currently running:[0m
+[1;31mE (316342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (316342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (316342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (317362) DOMINANT FREQ: freq: 33.934689[0m
+[0;32mI (318612) DOMINANT FREQ: freq: 33.893505[0m
+[0;32mI (319872) DOMINANT FREQ: freq: 33.390514[0m
+[0;32mI (321122) DOMINANT FREQ: freq: 33.460327[0m
+[1;31mE (321342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (321342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (321342) task_wdt: Tasks currently running:[0m
+[1;31mE (321342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (321342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (321342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A79:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (322412) DOMINANT FREQ: freq: 34.020805[0m
+[0;32mI (323672) DOMINANT FREQ: freq: 33.225368[0m
+[0;32mI (324922) DOMINANT FREQ: freq: 33.589600[0m
+[0;32mI (326182) DOMINANT FREQ: freq: 33.945396[0m
+[1;31mE (326342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (326342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (326342) task_wdt: Tasks currently running:[0m
+[1;31mE (326342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (326342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (326342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (327472) DOMINANT FREQ: freq: 33.782139[0m
+[0;32mI (328722) DOMINANT FREQ: freq: 33.826126[0m
+[0;32mI (329982) DOMINANT FREQ: freq: 33.809635[0m
+[0;32mI (331232) DOMINANT FREQ: freq: 33.444660[0m
+[1;31mE (331342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (331342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (331342) task_wdt: Tasks currently running:[0m
+[1;31mE (331342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (331342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (331342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A76:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (332522) DOMINANT FREQ: freq: 33.987587[0m
+[0;32mI (333782) DOMINANT FREQ: freq: 33.673035[0m
+[0;32mI (335032) DOMINANT FREQ: freq: 33.432346[0m
+[0;32mI (336292) DOMINANT FREQ: freq: 33.866970[0m
+[1;31mE (336342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (336342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (336342) task_wdt: Tasks currently running:[0m
+[1;31mE (336342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (336342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (336342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x40041A73:0x3FCAE340 0x42009840:0x3FCAE360 0x42009A57:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (337582) DOMINANT FREQ: freq: 33.301445[0m
+[0;32mI (338842) DOMINANT FREQ: freq: 33.013622[0m
+[0;32mI (340092) DOMINANT FREQ: freq: 33.958488[0m
+[1;31mE (341342) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (341342) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (341342) task_wdt: Tasks currently running:[0m
+[1;31mE (341342) task_wdt: CPU 0: esp_timer[0m
+[1;31mE (341342) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (341342) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x4203F7F6:0x3FC95820 0x4203FC0C:0x3FC95840 0x403774E5:0x3FC95870 0x42043A1D:0x3FCAE340 0x42009A5A:0x3FCAE380 0x420408A6:0x3FCAE3A0 0x420408F5:0x3FCAE3D0 0x4037BBCD:0x3FCAE3F0
+
+[0;32mI (341382) DOMINANT FREQ: freq: 33.619331[0m
+[0;32mI (342632) DOMINANT FREQ: freq: 33.224895[0m
+[0;32mI (343892) DOMINANT FREQ: freq: 34.259586[0m
+[0;32mI (345142) DOMINANT FREQ: freq: 33.420319[0m

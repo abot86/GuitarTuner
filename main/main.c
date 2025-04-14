@@ -39,6 +39,8 @@
 
 #define ADC_CHANNEL ADC1_CHANNEL_6  // For microphone
 
+#define BUTTON_PIN  GPIO_NUM_19
+
 #define SDA_PIN GPIO_NUM_17
 #define SCL_PIN GPIO_NUM_18
 #define RST_PIN GPIO_NUM_21
@@ -58,20 +60,28 @@
 
 float samples[SAMPLES];   // ADC Sampling
 
+static float last_valid_freq = 0;
+
 // Frequency to musical note mapping
 typedef struct {
     float freq;
     char *note;
 } Note;
 
+
+// Default: random??
+// For E2, getting 186 (consistent)
+// For A2, getting 248 (occasionally 124?)
+// For D3, getting 166 (consistent)
+// For G3, getting 221 (consistent)
+// for B3, getting 279 (consistent)
+// E4 not consistent enough... 
 Note noteTable[] = {
-    {261.63, "C4"}, {277.18, "C#4"}, {293.66, "D4"}, {311.13, "D#4"},
-    {329.63, "E4"}, {349.23, "F4"}, {369.99, "F#4"}, {392.00, "G4"},
-    {415.30, "G#4"}, {440.00, "A4"}, {466.16, "A#4"}, {493.88, "B4"},
-    {523.25, "C5"}
+    {186.05, "E2"}, {124.10, "A2"}, {165.90, "D3"}, {221.20, "G3"},
+    {278.90, "B3"}, {64.80, "E4"}
 };
 
-static esp_timer_handle_t system_timer;
+static esp_timer_handle_t debounce_timer;
 static lv_disp_t *disp_handle;
 
 static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io,
@@ -133,11 +143,13 @@ static void read_analog() {
         float raw_value = apply_moving_average(adc1_get_raw(ADC_CHANNEL));
         // ESP_LOGI("ADC", "Raw Val: %f", raw_value);
 
+        /**
         float dc_offset = 1.25 * (4095.0 / 3.3);
         float max_amplitude = (2.0 / 3.3) * 4095.0;
         samples[i] = 1.5 * (raw_value - dc_offset) / (max_amplitude / 2);
-
-        ets_delay_us(1000000 / SAMPLING_FREQUENCY);
+        **/
+       samples[i] = (float)raw_value;
+       ets_delay_us(1000000 / SAMPLING_FREQUENCY);
     }
 
     /**
@@ -176,6 +188,13 @@ float get_dominant_frequency() {
     float shift = 0.5 * (left - right) / (left - 2 * max_mag + right);
     float dominant_freq = (max_idx + shift) * f_bin;
 
+    // Filtering notes above and below certain frequencies
+    if (dominant_freq > 350.0f || dominant_freq < 10.0f) {
+        dominant_freq = last_valid_freq; 
+    } else {
+        last_valid_freq = dominant_freq;
+    }
+
     free(cfg);
     free(out);
     ESP_LOGI("DOMINANT FREQ", "freq: %f", dominant_freq);
@@ -204,26 +223,47 @@ char* get_note_from_freq(float freq) {
 }
 
 
-// Timer callback
-static void timer_callback(void *arg) {
-    read_analog();
-    float freq = get_dominant_frequency(); 
-    detected_note = get_note_from_freq(freq);
-    display();
+// Debounce timer callback
+static void debounce_timer_callback(void *arg) {
+    if (gpio_get_level(BUTTON_PIN) == 1) {  // Ensure button is still pressed
+        for (int i = 0; i < 10; i++) {
+            read_analog();
+            float freq = get_dominant_frequency(); 
+            detected_note = get_note_from_freq(freq);
+            display();
+            vTaskDelay(10); 
+        }
+    }   
 }
 
+
+// Interrupt
+static void IRAM_ATTR gpio_isr_handler(void* arg) {
+    // Start 20ms debounce timer
+    esp_timer_start_once(debounce_timer, 20000);  
+}
+
+
+
 void app_main(void) {
+    // Configure GPIO input
+    gpio_config_t button_conf = {
+        .pin_bit_mask = (1ULL << BUTTON_PIN),
+        .mode = GPIO_MODE_INPUT,
+        .intr_type = GPIO_INTR_ANYEDGE
+    };
+    gpio_config(&button_conf);
+
+    // Create debounce timer
+    esp_timer_create_args_t debounce_timer_args = {
+        .callback = debounce_timer_callback,
+        .name = "debounce_timer"
+    };
+    esp_timer_create(&debounce_timer_args, &debounce_timer);
+
     // Configure ADC
     adc1_config_width(ADC_WIDTH_BIT_12);
     adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN_DB_12);
-
-    // Create system timer
-    esp_timer_create_args_t timer_args = {
-        .callback = timer_callback,
-        .name = "system_timer"
-    };
-    esp_timer_create(&timer_args, &system_timer);
-    esp_timer_start_periodic(system_timer, 1000000);
 
     // Configuring I2C
     i2c_config_t i2c_conf = {
@@ -288,5 +328,9 @@ void app_main(void) {
     const esp_lcd_panel_io_callbacks_t cbs = {
         .on_color_trans_done = notify_lvgl_flush_ready,
     };
+
+    // Install ISR service
+    gpio_install_isr_service(0);
+    gpio_isr_handler_add(BUTTON_PIN, gpio_isr_handler, NULL);
 
 }
