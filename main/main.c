@@ -80,7 +80,7 @@ typedef struct {
     char *note;
 } Note;
 
-
+// Note table
 Note noteTable[] = {
     {185.05, "E2"}, {124.10, "A2"}, {164.90, "D3"}, {220.50, "G3"},
     {278.90, "B3"}, {64.80, "E4"}
@@ -153,6 +153,7 @@ static void display(float freq_diff, char* detected_note, int tuning_in_progress
 int filter_buffer[FILTER_SIZE];
 int filter_index = 0;
 
+// Apply moving average filter to ADC readings
 int apply_moving_average(int new_sample) {
     filter_buffer[filter_index] = new_sample;
     filter_index = (filter_index + 1) % FILTER_SIZE;
