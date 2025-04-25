@@ -1,35 +1,120 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C6 | ESP32-H2 | ESP32-P4 | ESP32-S2 | ESP32-S3 |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+# ESP32 Automated Guitar Tuner
 
-# _Sample project_
+An automated guitar tuning system built on the ESP32 platform that uses audio frequency detection and motor control to automatically tune guitar strings.
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+## Features
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+- Real-time frequency detection using FFT analysis
+- Automatic string identification and tuning
+- OLED display interface showing tuning status
+- Push-button operation
+- Motor-driven tuning mechanism
+- Support for standard guitar tuning (E2, A2, D3, G3, B3, E4)
 
+## Hardware Requirements
 
+- ESP32 Heltec Board
+- DC Motor with Driver
+- Microphone Module (ADC input)
+- Push Button
+- Power Supply
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+### Pin Configuration
 
-## Example folder contents
+#### OLED Display (I2C)
+- SDA: GPIO 17
+- SCL: GPIO 18
+- RST: GPIO 21
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+#### Motor Driver
+- IN1: GPIO 5
+- IN2: GPIO 4
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+#### Input
+- Button: GPIO 19
+- Microphone: ADC1 Channel 6
 
-Below is short explanation of remaining files in the project folder.
+## Software Dependencies
 
+- ESP-IDF Framework
+- LVGL Library for display
+- kissfft Library for FFT computation
+
+## Key Parameters
+
+### Audio Processing
+- Sampling Rate: 4096 Hz
+- Sample Size: 4096 samples
+- Moving Average Filter Size: 10 samples
+
+### Tuning Parameters
+- Tuning Tolerance: within 1 Hz
+- Delay Scale: 60 ms (for motor control timing)
+- Frequency Samples: 3 (for averaging)
+
+### Supported Notes and Frequencies
+```c
+E2: 185.05 Hz
+A2: 124.10 Hz
+D3: 164.90 Hz
+G3: 220.50 Hz
+B3: 278.90 Hz
+E4: 64.80 Hz
 ```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+
+## How It Works
+
+1. **Initialization**
+   - Configures GPIO pins for button input and motor control
+   - Sets up I2C communication for OLED display
+   - Initializes ADC for microphone input
+   - Configures LVGL for display interface
+
+2. **Operation Flow**
+   - User presses button to start tuning process
+   - System samples audio from microphone
+   - FFT analysis determines dominant frequency
+   - Closest musical note is identified
+   - Motor adjusts string tension based on frequency difference
+   - Display shows real-time tuning status
+
+3. **Display Interface**
+   - Shows "Tuning..." during adjustment
+   - Displays string being tuned
+   - Shows frequency difference and polarity
+   - Indicates when tuning is complete
+
+## Usage
+
+1. Power on the device
+2. Pluck the guitar string you want to tune
+3. Press the button to start tuning process
+4. Wait for the motor to adjust the string tension
+5. When "Tuning complete" is displayed, the string is properly tuned
+6. Repeat for other strings
+
+## Technical Details
+
+### Signal Processing
+- Uses moving average filter for noise reduction
+- Implements FFT for frequency analysis
+- Quadratic interpolation for improved frequency accuracy
+
+### Motor Control
+- Bidirectional control for tightening/loosening
+- Proportional control based on frequency difference
+- Automatic stop when within tuning tolerance
+
+## Limitations
+
+- Works best in quiet environments
+- Requires proper microphone positioning
+- Motor control timing may need adjustment based on specific hardware
+- Limited to standard guitar tuning frequencies
+
+## Future Improvements
+
+- Add support for alternative tunings
+- Implement PWM control for smoother motor operation
+- Switch to servo motor for more precise tuning
+- Support for different string instruments
