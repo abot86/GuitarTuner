@@ -1,0 +1,280 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr 21 2025 16:53:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v1.2[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c060020 size=12dfch ( 77308) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=00022e24 vaddr=3fc94800 size=02b90h ( 11152) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=000259bc vaddr=40374000 size=0a65ch ( 42588) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=57ab4h (359092) map[0m
+[0;32mI (179) esp_image: segment 4: paddr=00087adc vaddr=4037e65c size=060b8h ( 24760) load[0m
+[0;32mI (184) esp_image: segment 5: paddr=0008db9c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (191) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (191) boot: Disabling RNG early entropy source...[0m
+[0;32mI (204) cpu_start: Multicore app[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     main[0m
+[0;32mI (217) app_init: App version:      643a715[0m
+[0;32mI (221) app_init: Compile time:     Apr 21 2025 16:53:23[0m
+[0;32mI (226) app_init: ELF file SHA256:  e0aaff78e...[0m
+[0;32mI (230) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (234) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (238) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (242) efuse_init: Chip rev:         v0.1[0m
+[0;32mI (246) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (252) heap_init: At 3FCAC050 len 0003D6C0 (245 KiB): RAM[0m
+[0;32mI (257) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (262) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: gd[0m
+[0;32mI (276) spi_flash: flash io: dio[0m
+[0;33mW (279) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (291) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (301) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (309) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (315) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (322) main_task: Started on CPU0[0m
+[0;32mI (332) main_task: Calling app_main()[0m
+[0;32mI (332) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:3 [0m
+[0;32mI (332) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (342) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (352) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (482) LVGL: Starting LVGL task[0m
+[0;32mI (492) main_task: Returned from app_main()[0m
+[0;32mI (4972) DOMINANT FREQ: freq: 197.328659[0m
+[0;32mI (6712) DOMINANT FREQ: freq: 98.867325[0m
+[0;32mI (8452) DOMINANT FREQ: freq: 98.937714[0m
+[0;32mI (8952) INTERRUPT: Average frequency: 131.711227 Hz[0m
+[0;32mI (8952) INTERRUPT: Detected note: A2[0m
+[0;32mI (8952) SPACER: --------------------------------[0m
+[0;32mI (8952) MOTOR DRIVER: Frequency difference: 7.611229 Hz[0m
+[0;32mI (8952) MOTOR DRIVER: Delay: 456 ms[0m
+[0;32mI (8952) SPACER: --------------------------------[0m
+[0;32mI (8972) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (8972) SPACER: --------------------------------[0m
+[0;32mI (11662) DOMINANT FREQ: freq: 98.908867[0m
+[0;32mI (13902) DOMINANT FREQ: freq: 98.922775[0m
+[0;32mI (16142) DOMINANT FREQ: freq: 198.756866[0m
+[0;32mI (16142) INTERRUPT: Average frequency: 132.196167[0m
+[0;32mI (16142) SPACER: --------------------------------[0m
+[0;32mI (16142) MOTOR DRIVER: Frequency difference: 8.096169 Hz[0m
+[0;32mI (16152) MOTOR DRIVER: Delay: 485 ms[0m
+[0;32mI (16152) SPACER: --------------------------------[0m
+[0;32mI (16162) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (16162) SPACER: --------------------------------[0m
+[0;32mI (18892) DOMINANT FREQ: freq: 196.999969[0m
+[0;32mI (21132) DOMINANT FREQ: freq: 197.008331[0m
+[0;32mI (23372) DOMINANT FREQ: freq: 196.951492[0m
+[0;32mI (23372) INTERRUPT: Average frequency: 196.986588[0m
+[0;32mI (23372) SPACER: --------------------------------[0m
+[0;32mI (23372) MOTOR DRIVER: Frequency difference: 72.886589 Hz[0m
+[0;32mI (23382) MOTOR DRIVER: Delay: 4373 ms[0m
+[0;32mI (23382) SPACER: --------------------------------[0m
+[0;32mI (23392) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (23392) SPACER: --------------------------------[0m
+[0;32mI (39942) DOMINANT FREQ: freq: 12.651688[0m
+[0;32mI (41682) DOMINANT FREQ: freq: 111.716469[0m
+[0;32mI (43422) DOMINANT FREQ: freq: 68.103127[0m
+[0;32mI (43922) INTERRUPT: Average frequency: 64.157097 Hz[0m
+[0;32mI (43922) INTERRUPT: Detected note: E4[0m
+[0;32mI (43922) SPACER: --------------------------------[0m
+[0;32mI (43922) MOTOR DRIVER: Frequency difference: -0.642906 Hz[0m
+[0;32mI (43922) MOTOR DRIVER: Delay: 38 ms[0m
+[0;32mI (43932) SPACER: --------------------------------[0m
+[0;32mI (43932) MOTOR DRIVER: Tuning complete[0m
+[0;32mI (43932) SPACER: --------------------------------[0m
+[0;32mI (52022) DOMINANT FREQ: freq: 131.927322[0m
+[0;32mI (53762) DOMINANT FREQ: freq: 82.624550[0m
+[0;32mI (55502) DOMINANT FREQ: freq: 110.896782[0m
+[0;32mI (56002) INTERRUPT: Average frequency: 108.482887 Hz[0m
+[0;32mI (56002) INTERRUPT: Detected note: A2[0m
+[0;32mI (56002) SPACER: --------------------------------[0m
+[0;32mI (56002) MOTOR DRIVER: Frequency difference: -15.617111 Hz[0m
+[0;32mI (56002) MOTOR DRIVER: Delay: 937 ms[0m
+[0;32mI (56012) SPACER: --------------------------------[0m
+[0;32mI (56022) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (56022) SPACER: --------------------------------[0m
+[0;32mI (59192) DOMINANT FREQ: freq: 106.744072[0m
+[0;32mI (61432) DOMINANT FREQ: freq: 111.041862[0m
+[0;32mI (63672) DOMINANT FREQ: freq: 191.593063[0m
+[0;32mI (63672) INTERRUPT: Average frequency: 136.459671[0m
+[0;32mI (63672) SPACER: --------------------------------[0m
+[0;32mI (63682) MOTOR DRIVER: Frequency difference: 12.359673 Hz[0m
+[0;32mI (63682) MOTOR DRIVER: Delay: 741 ms[0m
+[0;32mI (63682) SPACER: --------------------------------[0m
+[0;32mI (63692) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (63692) SPACER: --------------------------------[0m
+[0;32mI (66682) DOMINANT FREQ: freq: 69.098320[0m
+[0;32mI (68922) DOMINANT FREQ: freq: 113.560913[0m
+[0;32mI (71162) DOMINANT FREQ: freq: 106.743225[0m
+[0;32mI (71162) INTERRUPT: Average frequency: 96.467491[0m
+[0;32mI (71162) SPACER: --------------------------------[0m
+[0;32mI (71162) MOTOR DRIVER: Frequency difference: -27.632507 Hz[0m
+[0;32mI (71172) MOTOR DRIVER: Delay: 1657 ms[0m
+[0;32mI (71172) SPACER: --------------------------------[0m
+[0;32mI (71182) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (71182) SPACER: --------------------------------[0m
+[0;32mI (75082) DOMINANT FREQ: freq: 118.974510[0m
+[0;32mI (77322) DOMINANT FREQ: freq: 125.928230[0m
+[0;32mI (79562) DOMINANT FREQ: freq: 102.672440[0m
+[0;32mI (79562) INTERRUPT: Average frequency: 115.858398[0m
+[0;32mI (79562) SPACER: --------------------------------[0m
+[0;32mI (79572) MOTOR DRIVER: Frequency difference: -8.241600 Hz[0m
+[0;32mI (79572) MOTOR DRIVER: Delay: 494 ms[0m
+[0;32mI (79572) SPACER: --------------------------------[0m
+[0;32mI (79582) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (79582) SPACER: --------------------------------[0m
+[0;32mI (82322) DOMINANT FREQ: freq: 40.769367[0m
+[0;32mI (84562) DOMINANT FREQ: freq: 110.246323[0m
+[0;32mI (86802) DOMINANT FREQ: freq: 117.438042[0m
+[0;32mI (86802) INTERRUPT: Average frequency: 89.484581[0m
+[0;32mI (86802) SPACER: --------------------------------[0m
+[0;32mI (86802) MOTOR DRIVER: Frequency difference: -34.615417 Hz[0m
+[0;32mI (86812) MOTOR DRIVER: Delay: 2076 ms[0m
+[0;32mI (86812) SPACER: --------------------------------[0m
+[0;32mI (86822) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (86822) SPACER: --------------------------------[0m
+[0;32mI (91142) DOMINANT FREQ: freq: 116.063187[0m
+[0;32mI (93382) DOMINANT FREQ: freq: 127.123253[0m
+[0;32mI (95622) DOMINANT FREQ: freq: 127.198517[0m
+[0;32mI (95622) INTERRUPT: Average frequency: 123.461647[0m
+[0;32mI (95622) SPACER: --------------------------------[0m
+[0;32mI (95632) MOTOR DRIVER: Frequency difference: -0.638351 Hz[0m
+[0;32mI (95632) MOTOR DRIVER: Delay: 38 ms[0m
+[0;32mI (95632) SPACER: --------------------------------[0m
+[0;32mI (95642) MOTOR DRIVER: Tuning complete[0m
+[0;32mI (95642) SPACER: --------------------------------[0m
+[0;32mI (233552) DOMINANT FREQ: freq: 118.988571[0m
+[0;32mI (235292) DOMINANT FREQ: freq: 118.707230[0m
+[0;32mI (237032) DOMINANT FREQ: freq: 118.735313[0m
+[0;32mI (237532) INTERRUPT: Average frequency: 118.810371 Hz[0m
+[0;32mI (237532) INTERRUPT: Detected note: A2[0m
+[0;32mI (237532) SPACER: --------------------------------[0m
+[0;32mI (237532) MOTOR DRIVER: Frequency difference: -5.289627 Hz[0m
+[0;32mI (237532) MOTOR DRIVER: Delay: 317 ms[0m
+[0;32mI (237542) SPACER: --------------------------------[0m
+[0;32mI (237552) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (237552) SPACER: --------------------------------[0m
+[0;32mI (240102) DOMINANT FREQ: freq: 118.802605[0m
+[0;32mI (242342) DOMINANT FREQ: freq: 119.097221[0m
+[0;32mI (244582) DOMINANT FREQ: freq: 119.199890[0m
+[0;32mI (244582) INTERRUPT: Average frequency: 119.033241[0m
+[0;32mI (244582) SPACER: --------------------------------[0m
+[0;32mI (244592) MOTOR DRIVER: Frequency difference: -5.066757 Hz[0m
+[0;32mI (244592) MOTOR DRIVER: Delay: 304 ms[0m
+[0;32mI (244592) SPACER: --------------------------------[0m
+[0;32mI (244602) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (244612) SPACER: --------------------------------[0m
+[0;32mI (247152) DOMINANT FREQ: freq: 121.691895[0m
+[0;32mI (249392) DOMINANT FREQ: freq: 121.668991[0m
+[0;32mI (251632) DOMINANT FREQ: freq: 121.909752[0m
+[0;32mI (251632) INTERRUPT: Average frequency: 121.756874[0m
+[0;32mI (251632) SPACER: --------------------------------[0m
+[0;32mI (251642) MOTOR DRIVER: Frequency difference: -2.343124 Hz[0m
+[0;32mI (251642) MOTOR DRIVER: Delay: 140 ms[0m
+[0;32mI (251642) SPACER: --------------------------------[0m
+[0;32mI (251652) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (251662) SPACER: --------------------------------[0m
+[0;32mI (254042) DOMINANT FREQ: freq: 123.476852[0m
+[0;32mI (256282) DOMINANT FREQ: freq: 123.651443[0m
+[0;32mI (258522) DOMINANT FREQ: freq: 123.730263[0m
+[0;32mI (258522) INTERRUPT: Average frequency: 123.619514[0m
+[0;32mI (258522) SPACER: --------------------------------[0m
+[0;32mI (258532) MOTOR DRIVER: Frequency difference: -0.480484 Hz[0m
+[0;32mI (258532) MOTOR DRIVER: Delay: 28 ms[0m
+[0;32mI (258532) SPACER: --------------------------------[0m
+[0;32mI (258542) MOTOR DRIVER: Tuning complete[0m
+[0;32mI (258542) SPACER: --------------------------------[0m
+[0;32mI (751502) DOMINANT FREQ: freq: 125.550468[0m
+[0;32mI (753242) DOMINANT FREQ: freq: 143.117844[0m
+[0;32mI (754982) DOMINANT FREQ: freq: 111.129311[0m
+[0;32mI (755482) INTERRUPT: Average frequency: 126.599205 Hz[0m
+[0;32mI (755482) INTERRUPT: Detected note: A2[0m
+[0;32mI (755482) SPACER: --------------------------------[0m
+[0;32mI (755482) MOTOR DRIVER: Frequency difference: 2.499207 Hz[0m
+[0;32mI (755482) MOTOR DRIVER: Delay: 149 ms[0m
+[0;32mI (755492) SPACER: --------------------------------[0m
+[0;32mI (755502) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (755502) SPACER: --------------------------------[0m
+[0;32mI (757882) DOMINANT FREQ: freq: 120.078094[0m
+[0;32mI (760122) DOMINANT FREQ: freq: 115.019737[0m
+[0;32mI (762362) DOMINANT FREQ: freq: 110.931976[0m
+[0;32mI (762362) INTERRUPT: Average frequency: 115.343269[0m
+[0;32mI (762362) SPACER: --------------------------------[0m
+[0;32mI (762372) MOTOR DRIVER: Frequency difference: -8.756729 Hz[0m
+[0;32mI (762372) MOTOR DRIVER: Delay: 525 ms[0m
+[0;32mI (762372) SPACER: --------------------------------[0m
+[0;32mI (762382) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (762392) SPACER: --------------------------------[0m
+[0;32mI (765152) DOMINANT FREQ: freq: 105.839981[0m
+[0;32mI (767392) DOMINANT FREQ: freq: 105.977859[0m
+[0;32mI (769632) DOMINANT FREQ: freq: 125.905083[0m
+[0;32mI (769632) INTERRUPT: Average frequency: 112.574310[0m
+[0;32mI (769632) SPACER: --------------------------------[0m
+[0;32mI (769642) MOTOR DRIVER: Frequency difference: -11.525688 Hz[0m
+[0;32mI (769642) MOTOR DRIVER: Delay: 691 ms[0m
+[0;32mI (769642) SPACER: --------------------------------[0m
+[0;32mI (769652) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (769662) SPACER: --------------------------------[0m
+[0;32mI (772592) DOMINANT FREQ: freq: 118.842941[0m
+[0;32mI (774832) DOMINANT FREQ: freq: 148.036575[0m
+[0;32mI (777072) DOMINANT FREQ: freq: 68.465599[0m
+[0;32mI (777072) INTERRUPT: Average frequency: 111.781708[0m
+[0;32mI (777072) SPACER: --------------------------------[0m
+[0;32mI (777082) MOTOR DRIVER: Frequency difference: -12.318291 Hz[0m
+[0;32mI (777082) MOTOR DRIVER: Delay: 739 ms[0m
+[0;32mI (777082) SPACER: --------------------------------[0m
+[0;32mI (777092) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (777102) SPACER: --------------------------------[0m
+[0;32mI (780072) DOMINANT FREQ: freq: 57.375912[0m
+[0;32mI (782312) DOMINANT FREQ: freq: 25.755774[0m
+[0;32mI (784552) DOMINANT FREQ: freq: 61.053703[0m
+[0;32mI (784552) INTERRUPT: Average frequency: 48.061798[0m
+[0;32mI (784552) SPACER: --------------------------------[0m
+[0;32mI (784562) MOTOR DRIVER: Frequency difference: -76.038200 Hz[0m
+[0;32mI (784562) MOTOR DRIVER: Delay: 4562 ms[0m
+[0;32mI (784562) SPACER: --------------------------------[0m
+[0;32mI (784572) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (784582) SPACER: --------------------------------[0m
+[0;32mI (791382) DOMINANT FREQ: freq: 40.554867[0m
+[0;32mI (793622) DOMINANT FREQ: freq: 120.292686[0m
+[0;32mI (795862) DOMINANT FREQ: freq: 115.883659[0m
+[0;32mI (795862) INTERRUPT: Average frequency: 92.243736[0m
+[0;32mI (795862) SPACER: --------------------------------[0m
+[0;32mI (795872) MOTOR DRIVER: Frequency difference: -31.856262 Hz[0m
+[0;32mI (795872) MOTOR DRIVER: Delay: 1911 ms[0m
+[0;32mI (795872) SPACER: --------------------------------[0m
+[0;32mI (795882) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (795892) SPACER: --------------------------------[0m
+[0;32mI (800042) DOMINANT FREQ: freq: 60.644985[0m
+[0;32mI (802282) DOMINANT FREQ: freq: 67.995842[0m
+[0;32mI (804522) DOMINANT FREQ: freq: 21.735428[0m
+[0;32mI (804522) INTERRUPT: Average frequency: 50.125416[0m
+[0;32mI (804522) SPACER: --------------------------------[0m
+[0;32mI (804532) MOTOR DRIVER: Frequency difference: -73.974579 Hz[0m
+[0;32mI (804532) MOTOR DRIVER: Delay: 4438 ms[0m
+[0;32mI (804532) SPACER: --------------------------------[0m
+[0;32mI (804542) MOTOR DRIVER: Tuning in progress[0m
+[0;32mI (804552) SPACER: --------------------------------[0m

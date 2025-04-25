@@ -37,8 +37,8 @@
 #include "kiss_fft.h"
 #include "kiss_fftr.h"
 
-#define ADC_CHANNEL ADC1_CHANNEL_6  // For microphone
 
+//GPIOs
 #define BUTTON_PIN  GPIO_NUM_19
 
 #define SDA_PIN GPIO_NUM_17
@@ -48,21 +48,27 @@
 #define MOTOR_IN1 GPIO_NUM_5
 #define MOTOR_IN2 GPIO_NUM_4
 
+//I2C
 #define CLOCK_HZ    (400 * 1000)
 #define I2C_ADDR    0x3C
 #define I2C_HOST    0
 
+//Display   
 #define DISP_WIDTH  128
 #define DISP_HEIGHT 64 
 
 #define LCD_CMD_BITS    8
 #define LCD_PARAM_BITS  8
 
+//ADC
 #define SAMPLES 4096
 #define SAMPLING_FREQUENCY  4096   // Adjust as needed
+#define ADC_CHANNEL ADC1_CHANNEL_6  // For microphone
 
-#define TUNING_TOLERANCE 400
-#define DELAY_SCALE 100
+//Tuning constants
+#define TUNING_TOLERANCE 1
+#define DELAY_SCALE 60
+#define FREQUENCY_SAMPLES 3
 
 float samples[SAMPLES];   // ADC Sampling
 
@@ -75,15 +81,8 @@ typedef struct {
 } Note;
 
 
-// Default: random??
-// For E2, getting 186 (consistent)
-// For A2, getting 124 (occasionally 248?)
-// For D3, getting 166 (consistent)
-// For G3, getting 221 (consistent)
-// for B3, getting 279 (consistent)
-// E4 not consistent enough... 
 Note noteTable[] = {
-    {186.05, "E2"}, {124.10, "A2"}, {165.90, "D3"}, {221.20, "G3"},
+    {185.05, "E2"}, {124.10, "A2"}, {164.90, "D3"}, {220.50, "G3"},
     {278.90, "B3"}, {64.80, "E4"}
 };
 
@@ -98,23 +97,52 @@ static bool notify_lvgl_flush_ready(esp_lcd_panel_io_handle_t panel_io,
     return false;
 }
 
-char *detected_note = "Unknown";
+// Label Objects
+static lv_obj_t* status_label = NULL;
+static lv_obj_t* note_label = NULL;
+static lv_obj_t* freq_label = NULL;
 
-// Label Object
-lv_obj_t* note_label = NULL;
+static char freq_text[50];
+static char note_text[50];
+static char status_text[50];
 
-// Label Character Array
-char note_num[50];
-
-// Temp Display
-static void display() {
+// Display tuning status
+static void display(float freq_diff, char* detected_note, int tuning_in_progress) {
     lv_obj_t *scr = lv_disp_get_scr_act(disp_handle);
     if (lvgl_port_lock(0)) {
         lv_obj_clean(scr);
 
-        note_label = lv_label_create(scr);
-        lv_obj_set_style_text_font(note_label, &lv_font_montserrat_14, 0); 
-        lv_obj_align(note_label, LV_ALIGN_TOP_MID, 0, 0);
+        status_label = lv_label_create(scr);
+        lv_obj_set_style_text_font(status_label, &lv_font_montserrat_14, 0);
+        lv_obj_align(status_label, LV_ALIGN_TOP_MID, 0, 0);
+
+        if (tuning_in_progress) {
+            // Show which string is being tuned
+            lv_label_set_text(status_label, "Tuning...");
+            
+            // Note label
+            note_label = lv_label_create(scr);
+            lv_obj_set_style_text_font(note_label, &lv_font_montserrat_14, 0);
+            lv_obj_align(note_label, LV_ALIGN_CENTER, 0, 0);
+            lv_label_set_text(note_label, detected_note);
+
+            // Frequency difference label
+            freq_label = lv_label_create(scr);
+            lv_obj_set_style_text_font(freq_label, &lv_font_montserrat_14, 0);
+            lv_obj_align(freq_label, LV_ALIGN_BOTTOM_MID, 0, 0);
+            snprintf(freq_text, sizeof(freq_text), "%.2f", freq_diff);
+            lv_label_set_text(freq_label, freq_text);
+        }
+        else {
+            // Show tuning complete screen
+            lv_label_set_text(status_label, "Tuning complete");
+
+            // Note label (which string was just tuned)
+            note_label = lv_label_create(scr);
+            lv_obj_set_style_text_font(note_label, &lv_font_montserrat_14, 0);
+            lv_obj_align(note_label, LV_ALIGN_CENTER, 0, 0);
+            lv_label_set_text(note_label, detected_note);
+        }
 
         lvgl_port_unlock();
     }
@@ -138,7 +166,7 @@ int apply_moving_average(int new_sample) {
 }
 
 
-// ADC reading 
+// ADC reading of microphone
 static void read_analog() {
     for (int i = 0; i < SAMPLES; i++) {
         float raw_value = apply_moving_average(adc1_get_raw(ADC_CHANNEL));
@@ -221,16 +249,109 @@ char* get_note_from_freq(float freq) {
     return bestNote;
 }
 
+// Drive DC motor from average frequencies of polling
+static float frequency_to_motor_driver(float avg_freq, char* noteName) {
+    float ref_freq = 0.0;
+    
+    // Get reference frequency from note table
+    int n = sizeof(noteTable) / sizeof(noteTable[0]);
+    for (int i = 0; i < n; i++) {
+        if (strcmp(noteTable[i].note, noteName) == 0) {
+            ref_freq = noteTable[i].freq;
+        }
+    }
+
+    // Calculate difference between reference and average frequency
+    float diff = avg_freq - ref_freq;
+    float diff_mag = fabs(diff);
+    int delay = diff_mag * DELAY_SCALE; // Proportional feedback
+
+    ESP_LOGI("MOTOR DRIVER", "Frequency difference: %f Hz", diff);
+    ESP_LOGI("MOTOR DRIVER", "Delay: %d ms", delay);
+    ESP_LOGI("SPACER", "--------------------------------");
+
+    // If within tolerance, stop motor and indicate successful tuning
+    if (diff_mag < TUNING_TOLERANCE){
+        display(diff, noteName, 0);
+        ESP_LOGI("MOTOR DRIVER", "Tuning complete");
+        ESP_LOGI("SPACER", "--------------------------------");
+        gpio_set_level(MOTOR_IN1, 1);    
+        gpio_set_level(MOTOR_IN2, 1);
+        return 0;                         // indicates successful tuning
+    }
+    else {
+        // If not within tolerance, drive motor in appropriate direction
+        if (diff > 0){                      // CW and CCW depending on polarity of diff
+            display(diff, noteName, 1);
+            ESP_LOGI("MOTOR DRIVER", "Tuning in progress");
+            ESP_LOGI("SPACER", "--------------------------------");
+            gpio_set_level(MOTOR_IN1, 0);    
+            gpio_set_level(MOTOR_IN2, 1);
+            vTaskDelay(pdMS_TO_TICKS(delay));
+            gpio_set_level(MOTOR_IN1, 1);    
+            gpio_set_level(MOTOR_IN2, 1);
+        }
+        else{
+            display(diff, noteName, 1);
+            ESP_LOGI("MOTOR DRIVER", "Tuning in progress");
+            ESP_LOGI("SPACER", "--------------------------------");
+            gpio_set_level(MOTOR_IN1, 1);    
+            gpio_set_level(MOTOR_IN2, 0);
+            vTaskDelay(pdMS_TO_TICKS(delay));
+            gpio_set_level(MOTOR_IN1, 1);    
+            gpio_set_level(MOTOR_IN2, 1);
+        }
+        return diff;
+    }
+}
 
 // Debounce timer callback
 static void debounce_timer_callback(void *arg) {
-    if (gpio_get_level(BUTTON_PIN) == 1) {  // Ensure button is still pressed
-        for (int i = 0; i < 10; i++) {
-            read_analog();
-            float freq = get_dominant_frequency(); 
-            detected_note = get_note_from_freq(freq);
-            display();
-            vTaskDelay(10); 
+    if (gpio_get_level(BUTTON_PIN) == 1) {
+        float freq_sum = 0;
+        float avg_freq = 0;
+        float freq_diff = 0;
+        char* detected_note = "";
+
+        // Preliminary read to get detected note (which string is being tuned)
+        for (int i = 0; i < FREQUENCY_SAMPLES; i++){
+            vTaskDelay(100);  // Wait for next sample
+            read_analog();  // Read microphone
+            freq_sum += get_dominant_frequency();  // Get dominant frequency
+        }
+
+        avg_freq = freq_sum / (float)FREQUENCY_SAMPLES;  // Get average frequency
+        detected_note = get_note_from_freq(avg_freq);  // Get note from frequency
+
+        ESP_LOGI("INTERRUPT", "Average frequency: %f Hz", avg_freq);
+        ESP_LOGI("INTERRUPT", "Detected note: %s", detected_note);
+        ESP_LOGI("SPACER", "--------------------------------");
+
+        // Tuning loop
+        for (int i = 0; i < 10; i++){
+            // Drive motor based on average frequency and reference note
+            freq_diff = frequency_to_motor_driver(avg_freq, detected_note);
+
+            // If within tolerance, break out of loop
+            if (freq_diff == 0){
+                break;
+            }
+
+            // Read again to get new average frequency
+            freq_sum = 0;
+            avg_freq = 0;
+            freq_diff = 0;
+
+            // Get new average frequency
+            for (int i = 0; i < FREQUENCY_SAMPLES; i++){
+                vTaskDelay(100);
+                read_analog();
+                freq_sum += get_dominant_frequency(); 
+            }
+
+            avg_freq = freq_sum / (float)FREQUENCY_SAMPLES;
+            ESP_LOGI("INTERRUPT", "Average frequency: %f", avg_freq);
+            ESP_LOGI("SPACER", "--------------------------------");
         }
     }   
 }
@@ -242,48 +363,6 @@ static void IRAM_ATTR gpio_isr_handler(void* arg) {
     esp_timer_start_once(debounce_timer, 20000);  
 }
 
-// Calculate DC motor driving from average frequencies of polling
-static int frequency_to_motor_driver(float avg_freq, char* noteName) {
-    float ref_freq = 0.0;
-    
-    // Get reference frequency
-    int n = sizeof(noteTable) / sizeof(noteTable[0]);
-    for (int i = 0; i < n; i++) {
-        if (strcmp(noteTable[i].note, noteName) == 0) {
-            ref_freq = noteTable[i].freq;
-        }
-    }
-
-    float diff = ref_freq - avg_freq;
-    float diff_mag = fabs(ref_freq - avg_freq);
-    int delay = diff_mag * DELAY_SCALE;     // Trial and error for delay scale constant
-
-    if (diff_mag < TUNING_TOLERANCE){
-        return 0;                         // ADD WAY TO INDICATE SUCCESSFUL TUNING
-    }
-    else {
-        if (diff > 0){                      // CW and CCW depending on polarity of diff
-            gpio_set_level(MOTOR_IN1, 1);    
-            gpio_set_level(MOTOR_IN2, 0);
-            vTaskDelay(pdMS_TO_TICKS(delay));
-            return 1;
-        }
-        else{
-            gpio_set_level(MOTOR_IN1, 0);    
-            gpio_set_level(MOTOR_IN2, 1);
-            vTaskDelay(pdMS_TO_TICKS(delay));
-            return 1;
-        }
-    }
-
-}
-
-// Drive DC motor
-static void drive_motor(bool direction, float delay) {
-    gpio_set_level(MOTOR_IN1, direction);  // HIGH
-    gpio_set_level(MOTOR_IN2, !direction);  // LOW
-    vTaskDelay(pdMS_TO_TICKS(delay));
-}
 
 void app_main(void) {
     // Configure GPIO input
@@ -378,6 +457,10 @@ void app_main(void) {
     const esp_lcd_panel_io_callbacks_t cbs = {
         .on_color_trans_done = notify_lvgl_flush_ready,
     };
+
+    // Initialize motor driver
+    gpio_set_level(MOTOR_IN1, 1);    
+    gpio_set_level(MOTOR_IN2, 1);
 
     // Install ISR service
     gpio_install_isr_service(0);
